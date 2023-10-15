@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.example.tms_an_15_homework_lesson_18"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
