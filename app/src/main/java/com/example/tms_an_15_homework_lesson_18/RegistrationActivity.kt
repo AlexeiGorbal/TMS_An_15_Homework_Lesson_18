@@ -16,12 +16,11 @@ class RegistrationActivity : AppCompatActivity() {
         val password = findViewById<AppCompatEditText>(R.id.password)
         val button = findViewById<AppCompatButton>(R.id.button)
 
-        val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra(LOGIN, login.text.toString())
-        intent.putExtra(PASSWORD, password.text.toString())
-
         button.setOnClickListener {
-            if ((login.length() >= VALID_LENGTH) && (password.length() >= VALID_LENGTH)) {
+            if ((login.length() <= VALID_LENGTH) && (password.length() <= VALID_LENGTH)) {
+                val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra(LOGIN, login.text.toString())
+                intent.putExtra(PASSWORD, password.text.toString())
                 startActivity(intent)
             }
         }
